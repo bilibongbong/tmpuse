@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TashList</string>
+    <string name="title_activity_my_task_panel">MyTaskPanelActivity</string>
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="175dp"
+    android:layout_height="93dp">
+    <ImageView
+        android:id="@+id/iv_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside"
+        android:src="@drawable/icon_day_task_treasure_box"/>
+
+    <ProgressBar
+        android:id="@+id/progress_box"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="87dp"
+        android:layout_height="8dp"
+        android:layout_marginBottom="22dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginEnd="12dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:max="100"
+        android:progress="50"
+        android:visibility="gone"
+        android:progressDrawable="@drawable/progress_treasure_box_theme"/>
+
+    <ImageView
+        android:id="@+id/open_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/icon_task_done"
+        android:visibility="visible"/>
+</RelativeLayout>
