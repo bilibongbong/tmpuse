@@ -1,7 +1,9 @@
 package com.ycloud.tashlist.taskitemholder;
 
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.ycloud.tashlist.R;
@@ -18,6 +20,12 @@ public class TaskItemHolder extends TaskHolder<TaskData> {
 
     public TaskItemHolder(View itemView, final ICompleteTaskLister completeTaskLister) {
         super(itemView, completeTaskLister);
+
+        RelativeLayout layout = (RelativeLayout) itemView;
+        layout.setLayoutParams(new RelativeLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT
+                , PixUtil.dpToPx(64, itemView.getContext())));
+
         tvCoins = (TextView) itemView.findViewById(R.id.tv_coins);
         tvContent = (TextView) itemView.findViewById(R.id.tv_content);
         ivState = (ImageView) itemView.findViewById(R.id.iv_state);

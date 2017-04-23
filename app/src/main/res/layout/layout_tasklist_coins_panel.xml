@@ -1,37 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="50dp"
-    android:paddingStart="10dp"
+    android:background="#393535"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingEnd="10dp"
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
-    android:paddingEnd="10dp"
-    android:background="#393535"
-    android:gravity="center_vertical">
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:gravity="center"
-    android:drawableLeft="@drawable/icon_coins_sign"
-    android:drawableStart="@drawable/icon_coins_sign"
-    android:drawablePadding="8dp"
-    android:textSize="16sp"
-    android:textColor="#ffffff"
-    android:text="我的欢乐币: "/>
+    android:paddingStart="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/icon_coins_sign"
+        android:drawablePadding="8dp"
+        android:drawableStart="@drawable/icon_coins_sign"
+        android:gravity="center"
+        android:text="我的欢乐币: "
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+
     <TextView
         android:id="@+id/iv_coins"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:text="600"
         android:textColor="#fdda35"
         android:textSize="16sp"
-        android:textStyle="bold"
-        android:layout_weight="1"/>
+        android:textStyle="bold" />
+
     <TextView
         android:id="@+id/tv_to_my_rewords_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="14sp"
+        android:text="查看已有奖励 >"
         android:textColor="#999999"
-        android:text="查看已有奖励 >"/>
+        android:textSize="14sp" />
 </LinearLayout>

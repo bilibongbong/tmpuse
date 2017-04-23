@@ -2,6 +2,7 @@ package com.ycloud.tashlist;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -41,6 +42,7 @@ public class TreasureBoxSeller extends RelativeLayout{
                 }
             }
         });
+        setGravity(Gravity.CENTER);
     }
 
     public void setImageResource(int res){

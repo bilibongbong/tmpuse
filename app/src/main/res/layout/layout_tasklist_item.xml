@@ -1,57 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="64dp">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:gravity="center_vertical">
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tv_coins"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
+            android:drawableTop="@drawable/icon_coins_sign"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:paddingEnd="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:paddingStart="15dp"
+            android:text="40"
+            android:textColor="#925609"
+            android:textSize="12sp" />
 
-            <TextView
-                android:id="@+id/tv_coins"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawableTop="@drawable/icon_coins_sign"
-                android:gravity="center"
-                android:paddingEnd="10dp"
-                android:paddingLeft="15dp"
-                android:paddingRight="10dp"
-                android:paddingStart="15dp"
-                android:text="40"
-                android:textColor="#925609"
-                android:textSize="12sp" />
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="完成一局6人游戏"
+            android:textColor="#0b0505"
+            android:textSize="15sp" />
 
-            <TextView
-                android:id="@+id/tv_content"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="完成一局6人游戏"
-                android:textSize="15sp" />
+        <ImageView
+            android:id="@+id/iv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/icon_task_done" />
+    </LinearLayout>
 
-            <ImageView
-                android:id="@+id/iv_state"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:layout_marginRight="10dp"
-                android:src="@drawable/icon_task_done" />
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="53dp"
-            android:layout_marginStart="53dp"
-            android:background="#dcdcdc" />
-    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="53dp"
+        android:layout_marginStart="53dp"
+        android:background="#dcdcdc" />
 </RelativeLayout>

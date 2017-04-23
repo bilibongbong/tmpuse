@@ -1,7 +1,9 @@
 package com.ycloud.tashlist.taskitemholder;
 
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.ycloud.tashlist.R;
@@ -20,6 +22,7 @@ public class ProgressTaskItemHolder extends TaskItemHolder {
 
     public ProgressTaskItemHolder(View itemView, ICompleteTaskLister completeTaskLister) {
         super(itemView, completeTaskLister);
+
         progressBar  = (ProgressBar) itemView.findViewById(R.id.progress_box);
         progressText = (TextView) itemView.findViewById(R.id.progress_text);
     }

@@ -91,35 +91,31 @@ public class CircleProgressBar extends View {
         int widthSize = MeasureSpec.getSize(widthMeasureSpec);
         int heightSize = MeasureSpec.getSize(heightMeasureSpec);
 
+        int defaultSize = (int)radius*2;
+
         int w = widthSize;
-        if ( widthMode == MeasureSpec.AT_MOST || w < 0){
-            w = (int)radius * 2;
+        if ( widthMode == MeasureSpec.AT_MOST){
+            w = defaultSize;
         }
-        else if (widthMode == MeasureSpec.EXACTLY){
-            w = widthSize;
-        }
-        else {
+        else if (widthMode != MeasureSpec.EXACTLY){
             w = 0xFFFFFF;
         }
 
         int h = heightSize;
-        if ( heightMode == MeasureSpec.AT_MOST || h < 0 ){
-            h = (int)radius*2;
+        if ( heightMode == MeasureSpec.AT_MOST ){
+            h = defaultSize;
         }
-        else if (heightMode == MeasureSpec.EXACTLY){
-            h = heightSize;
-        }
-        else {
+        else if (heightMode != MeasureSpec.EXACTLY){
             h = 0xFFFFFF;
         }
 
         progressWidth = Math.min(w, h);
         if ( progressWidth == 0xFFFFFF ){
-            progressWidth = (int)radius * 2;
+            progressWidth = defaultSize;
         }
         progressHeight = progressWidth;
 
-        x = widthSize / 2;
+        x = progressWidth / 2;
         y = x;
         radius = x;
 
@@ -156,14 +152,14 @@ public class CircleProgressBar extends View {
         if ((int)stripe == 0){
             stripe = radius;
         }
-        //绘制小圆,颜色透明
+        //绘制进度,颜色透明
         Paint smallCirclePaint = new Paint();
         smallCirclePaint.setAntiAlias(true);
         smallCirclePaint.setColor(backgroundColor);
         canvas.drawCircle(x, y, radius - stripe, smallCirclePaint);
 
         if (progressFormat != null){
-            //绘制文本
+            //绘制进度信息
             Paint textPaint = new Paint();
             String text = String.format(Locale.getDefault(), progressFormat, progress*100/max);
 
@@ -178,8 +174,6 @@ public class CircleProgressBar extends View {
     public void setMax(int max){
         this.max = max;
     }
-
-    //外部设置百分比数
     public void setProgress(int progress) {
         this.progress = progress;
         postInvalidate();
